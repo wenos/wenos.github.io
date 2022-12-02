@@ -905,7 +905,7 @@ main p {
     width: 3rem;
     font-size: 25px;
     color: rgb(68, 68, 68);
-    grid-area: "bell-header";
+    grid-area: bell-header;
     margin-bottom: 0;
     margin-left: 0.2rem;
     margin-top: 0.1rem;
@@ -922,7 +922,7 @@ main p {
     padding-right: 1.8rem;
     list-style: none;
     font-size: 17px;
-    grid-area: "bell-content";
+    grid-area: bell-content;
     display: block;
     overflow-y: scroll;
     color: rgb(232, 124, 147);
@@ -957,4 +957,8 @@ main p {
     top: 5px;
     right: 40px;
     cursor: pointer;
+}
+
+p .try_1 {
+    word-break: break-all;
 }

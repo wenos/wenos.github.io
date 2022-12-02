@@ -60,9 +60,9 @@
     <h2>Форматирование текста</h2>
     <p>Текст является важной частью любой книги, статьи, языка программирования и даже LaTeX не исключение, в этом разделе мы рассмотрим основные способы форматирования текста</p>
 
-    <div class="box-for-code"><div class="latex-code"><code>\underline{Подчеркнутый текст}</code></div><div class="vertical-line"></div><div class="latex-result"><u>Подчеркнутый текст</u></div></div>
-    <div class="box-for-code"><div class="latex-code"><code>\textbf{Полужирный текст}</code></div><div class="vertical-line"></div><div class="latex-result">$$\textbf{Полужирный текст}$$</div></div>
-    <div class="box-for-code"><div class="latex-code"><code>\textit{Курсивный текст}, \em{Курсивный текст}</code></div><div class="vertical-line"></div><div class="latex-result">$$\textit{Курсивный текст}, \textit{Курсивный текст}$$</div></div>
+    <div class="box-for-code"><div class="latex-code"><p class="try_1">\underline{Подчеркнутый текст}</p></div><div class="vertical-line"></div><div class="latex-result"><u>Подчеркнутый текст</u></div></div>
+    <div class="box-for-code"><div class="latex-code"><p class="try_1">\textbf{Полужирный текст}</p></div><div class="vertical-line"></div><div class="latex-result">$$\textbf{Полужирный текст}$$</div></div>
+    <div class="box-for-code"><div class="latex-code"><p class="try_1">\textit{Курсивный текст}, \em{Курсивный текст}</p></div><div class="vertical-line"></div><div class="latex-result">$$\textit{Курсивный текст}$$</div></div>
     <div class="line"></div>
     <h2>Вставка кода</h2>
     <p>Чтобы код не потерял свой внешний вид в LaTeX было создано множество пакетов, рассмотрим несколько из них. Для демонстрации результата воспользуемся онлайн-сервисом Overleaf.</p>
@@ -73,35 +73,35 @@
     <h3>Пакет Verbatim</h3>
     <p>Данный пакет максимально прост в использовании, вам лишь нужно прописать <b>\begin{verbatim}</b>, <b>\end{verbatim}</b> и вставить нужный код</p>
     <div class="box-for-code_im"><div class="latex-code_im">
-      <code>
+      <p class="try_1">
 \begin{verbatim} <br>
 for i in range(10): <br>
         &nbsp print("Hello, world!) <br>
 \end{verbatim}
-      </code>
+      </p>
     </div><div class="vertical-line"></div><div class="latex-result_im"><img src="images/code_1.jpeg" alt="Картинка оверлиф"></div></div>
     <div class="line"></div>
     <h3>Пакет Alltt</h3>
     <p>Данный пакет дает больше возможностей, чем пакет verbatim, вы сможете менять форматирование текста и даже выделять нужный текст цветами</p>
     <div class="box-for-code_im"><div class="latex-code_im">
-      <code>
+      <p class="try_1">
         \begin{alltt}<br>
         for i in range(10):<br>
         &nbsp \textit{print}("Hello, world!)<br>
         \end{alltt}
-      </code>
+      </p>
     </div><div class="vertical-line"></div><div class="latex-result_im"><img src="images/code_2.jpeg" alt="Картинка оверлиф"></div></div>
     <div class="line"></div>
     <h3>Пакет Minted</h3>
     <p>Данный пакет подходит для тех, кто хочет не просто передать сам код, но и синтаксическую подсветку языка, на котором пишет.
     Ключевой момент в том, чтобы после объявления начала блока кода написать название языка, на котором код написан.</p>
     <div class="box-for-code_im"><div class="latex-code_im">
-      <code>
+      <p class="try_1">
         \begin{minted}{python}<br>
         for i in range(10):<br>
         &nbsp print("Hello, world")<br>
         \end{minted}
-      </code>
+      </p>
     </div><div class="vertical-line"></div><div class="latex-result_im"><img src="images/code_3.jpeg" alt="Картинка оверлиф"></div></div>
       </div>
     </div>
