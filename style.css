@@ -555,6 +555,7 @@ footer .container_footer .sec p {
     footer .container_footer {
         grid-template-columns: 1fr 1fr;
     }
+
 }
 
 
@@ -562,11 +563,16 @@ footer .container_footer .sec p {
     footer .container_footer {
         grid-template-columns: 1fr;
     }
+    footer .content_grid_footer .container_footer {
+        padding-left: 40px;
+    }
 }
 
 .aboutus {
     word-break: break-all;
 }
+
+
 
 
 .main-content * {
