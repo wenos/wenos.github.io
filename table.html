@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Самоучитель по LaTeX</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/563ce4d2d7.js" crossorigin="anonymous"></script>
+
+</head>
+<body class="grid_container_main">
+<nav class="navbar header-mark">
+    <div class="logo">
+        <a href="index.html">
+            L<sup>A</sup>T<sub>E</sub>X
+        </a>
+    </div>
+    <ul class="nav-links">
+        <input type="checkbox" id="checkbox_toggle">
+        <label for="checkbox_toggle" class="hamburger"><span class="hamburger-line"></span></label>
+        <div class="menu">
+            <li>
+                <form action="firstPage.html">
+                    <button class="btn">
+                        <span class="box">
+                            Создание первого документа TeX
+                        </span>
+                    </button>
+                </form>
+            </li>
+            <li>
+                <form action="text_edit.html">
+                    <button class="btn">
+                        <span class="box">
+                            Обработка текста в L<sup>a</sup>T<sub>e</sub>X
+                        </span>
+                    </button>
+                </form>
+            </li>
+            <li>
+                <form action="math.html">
+                    <button class="btn">
+                        <span class="box">
+                            Математика в L<sup>a</sup>T<sub>e</sub>X
+                        </span>
+                    </button>
+                </form>
+            </li>
+        </div>
+    </ul>
+</nav>
+
+<div class="main-mark">
+    <main>
+
+        <h2>Таблицы в LaTeX</h2>
+        <p>Как и любой другой язык разметки LaTeX тоже имеет таблицы в своем арсенале, причем видов таблиц здесь
+            достаточно много, рассмотрим основные из них.</p>
+
+        <div class="vertical-box">
+<!--            <div class="alert alert-success" id="successMessage">Текст скопирован!</div>-->
+
+            <div class="vert-line"></div>
+            <div class="vertical-line"></div>
+            <div class="box-for-grid">
+
+                <h2>Matrix</h2>
+                <p>Матрицы нужны в основном для математических операций. Для работы с матрицами нужно лишь объявить блок начала <b>\begin{matrix}</b> и блок конца <b>\end{matrix}</b>.</p>
+                <div class="box-for-code_im"><div class="latex-code_im">
+                    <code>
+                        \begin{matrix} <br>
+                        &nbsp a & b & c \\ <br>
+                        &nbsp d & e & f \\ <br>
+                        &nbsp g & h & i <br>
+                        \end{matrix}
+                    </code>
+                </div><div class="vertical-line"></div><div class="latex-result_im"><img src="images/table_1.jpeg" alt="Котик"></div></div>
+                <div class="line"></div>
+                <h2>Pmatrix</h2>
+                <div class="box-for-code_im"><div class="latex-code_im">
+                    <code>
+                        A_{m,n} = <br>
+                        \begin{pmatrix} <br>
+                        &nbsp a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\ <br>
+                        &nbsp a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\ <br>
+                        &nbsp \vdots  & \vdots  & \ddots & \vdots  \\ <br>
+                        &nbsp a_{m,1} & a_{m,2} & \cdots & a_{m,n} <br>
+                        \end{pmatrix}
+                    </code>
+                </div><div class="vertical-line"></div><div class="latex-result_im"><img src="images/table_2.jpeg" alt="Котик"></div></div>
+                <div class="line"></div>
+                <h2>Bmatrix</h2>
+                <div class="box-for-code_im"><div class="latex-code_im">
+                    <code>
+                        M = \begin{bmatrix} <br>
+                        &nbsp a & b & c \\[0.1em] <br>
+                        &nbsp a & b & c \\[0.1em] <br>
+                        &nbsp a & b & c \\[0.1em] <br>
+                        \end{bmatrix}
+                    </code>
+                </div><div class="vertical-line"></div><div class="latex-result_im"><img src="images/table_3.jpeg" alt="Котик"></div></div>
+                <div class="line"></div>
+                <h2>BorderMatrix</h2>
+                <div class="box-for-code_im"><div class="latex-code_im">
+                    <code>
+                        M = \bordermatrix{~ & x & y \cr <br>
+                        &nbsp A & 1 & 0 \cr <br>
+                        &nbsp B & 0 & 1 \cr}} <br>
+                    </code>
+                </div><div class="vertical-line"></div><div class="latex-result_im"><img src="images/table_4.jpeg" alt="Котик"></div></div>
+                <div class="line"></div>
+
+                <h2>Array</h2>
+                <p>Array является стандартной таблицей, что примечательно array оформляется так же как и формулы, то есть в знаках $.</p>
+                <div class="box-for-code_im"><div class="latex-code_im">
+                    <code>
+                        $\begin{array}{|c|c|} <br>
+                        &nbsp \hline <br>
+                        &nbsp 1 & 2 \\ \hline <br>
+                        &nbsp 3 & 4 \\ \hline <br>
+                        \end{array}$
+                    </code>
+                </div><div class="vertical-line"></div><div class="latex-result_im"><img src="images/table_5.jpeg" alt="Картинка оверлиф"></div></div>
+                <div class="line"></div>
+                <h2>Tabular</h2>
+                <p>Tabular это продвинутая таблица, которая рассчитана на всевозможную работу со столбцами (вплоть до создания собственных вариаций столбцов)</p>
+                <div class="vertical-box">
+                    <div class="vert-line"></div>
+                    <div class="vertical-line"></div>
+                    <div class="box-for-grid">
+                <div class="box-for-code_im"><div class="latex-code_im">
+                    <code>
+                        \begin{tabular}{|c|c|c|c|} <br>
+                        &nbsp \hline <br>
+                        &nbsp a & b & с & d\\ \hline <br>
+                        &nbsp a & b & с & d\\ \hline <br>
+                        &nbsp a & b & с & d\\ \hline <br>
+                        &nbsp a & b & c & def \\ \hline <br>
+                        \end{tabular}
+                    </code>
+                </div><div class="vertical-line"></div><div class="latex-result_im"><img src="images/table_6.jpeg" alt="Котик"></div></div>
+                <div class="box-for-code_im"><div class="latex-code_im">
+                    <code>
+                        \begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|} <br>
+                        &nbsp \hline <br>
+                        &nbsp a & b & с & d\\ \hline <br>
+                        &nbsp a & b & с & d\\ \hline <br>
+                        &nbsp a & b & с & d\\ \hline <br>
+                        &nbsp a & b & c & def \\ \hline <br>
+                        \end{tabular}
+                    </code>
+                </div><div class="vertical-line"></div><div class="latex-result_im"><img src="images/table_7.jpeg" alt="Котик"></div></div>
+                <div class="box-for-code_im"><div class="latex-code_im">
+                    <code>
+                        \begin{tabular}{|l|l|l|l|} <br>
+                        &nbsp \hline <br>
+                        &nbsp a & b & с & d\\ \hline <br>
+                        &nbsp a & b & с & d\\ \hline <br>
+                        &nbsp a & b & с & d\\ \hline <br>
+                        &nbsp a & b & c & def \\ \hline <br>
+                        \end{tabular}
+                    </code>
+                </div><div class="vertical-line"></div><div class="latex-result_im"><img src="images/table_8.jpeg" alt="Котик"></div></div>
+                <div class="box-for-code_im"><div class="latex-code_im">
+                    <code>
+                        \begin{tabular}{|r|r|r|r|} <br>
+                        &nbsp \hline <br>
+                        &nbsp a & b & с & d\\ \hline <br>
+                        &nbsp a & b & с & d\\ \hline <br>
+                        &nbsp a & b & с & d\\ \hline <br>
+                        &nbsp a & b & c & def \\ \hline <br>
+                        \end{tabular}
+                    </code>
+                </div><div class="vertical-line"></div><div class="latex-result_im"><img src="images/table_9.jpeg" alt="Котик"></div></div>
+                <div class="line"></div>
+            </div>
+        </div>
+            </div>
+        </div>
+        <div class="bell" id="bell">
+            <div class="indicator" id="indicator">0</div>
+            <div class="bell-header">
+                <i class="fa fa-star" id="bellIcon"></i>
+            </div>
+            <ul class="bellContent" id="bellContent"></ul>
+        </div>
+    </main>
+</div>
+
+<div class="cat-mark">
+    <div class="cat-mark-content">
+        <p>
+            У нашего сайта нет рекламы, но есть уголок котиков, чтобы вы могли делать перерыв и смотреть на котиков ^-^
+        </p>
+        <div class="cat-img">
+            <img src="images/cat_7.jpg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_5.jpeg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_3.jpeg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_2.jpeg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_4.jpeg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_9.jpeg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_10.jpeg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_3.jpeg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_2.jpeg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_0.jpeg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_4.jpeg" alt="Котик">
+        </div>
+    </div>
+</div>
+
+<div class="footer footer-mark">
+    <footer>
+        <div class="content_grid_footer">
+            <div class="container_footer">
+                <div class="sec aboutus">
+                    <h2> О нас</h2>
+                    <p>
+                        Данный сайт создан студентом РТУ МИРЭА, чтобы обучить всех желающих текстовой разметке
+                        L<sup>A</sup>T<sub>E</sub>X. <br>
+                        Подробнее об авторе вы можете узнать по его социальным сетям.
+                    </p>
+                    <ul class="container_for_icons">
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-youtube-play"></i></a>
+                        </li>
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-instagram"></i></a>
+                        </li>
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-paper-plane"></i></a>
+                        </li>
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-github"></i></a></li>
+                    </ul>
+                </div>
+<!--                <div class="sec quicklinks">-->
+<!--                    <h2>Полезные Ссылки</h2>-->
+<!--                    <ul>-->
+<!--                        <li><a href="#">About</a></li>-->
+<!--                        <li><a href="#">FAQ</a></li>-->
+<!--                        <li><a href="#">Privacy Policy</a></li>-->
+<!--                        <li><a href="#">Help</a></li>-->
+<!--                        <li><a href="#">Contact</a></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+                <div class="sec contact">
+                    <h2>Наши контакты</h2>
+                    <ul class="info">
+                        <li>
+                            <span><i class="fa fa-map-marker"></i></span>
+                            <span>Вернадского 86с1</span>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-phone"></i></span>
+                            <p><a href="#">+7 800 555 35 35</a></p>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-envelope"></i></span>
+                            <p><a href="#">ramalguseynov03@gmail.com</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyrightText">
+        <p>Copyright © 2022 L<sup>A</sup>T<sub>E</sub>X tutorial. All right Reserved.</p>
+    </div>
+</div>
+
+<script src="pupupu.js"></script>
+
+</body>
+</html>

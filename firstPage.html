@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Самоучитель по LaTeX</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/563ce4d2d7.js" crossorigin="anonymous"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.3.0/katex.min.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body class="grid_container_main">
+<nav class="navbar header-mark">
+    <div class="logo">
+        <a href="index.html">
+            L<sup>A</sup>T<sub>E</sub>X
+        </a>
+    </div>
+    <ul class="nav-links">
+        <input type="checkbox" id="checkbox_toggle">
+        <label for="checkbox_toggle" class="hamburger"><span class="hamburger-line"></span></label>
+        <div class="menu">
+            <li>
+                <form action="text_edit.html">
+                    <button class="btn">
+                        <span class="box">
+                            Обработка текста в L<sup>a</sup>T<sub>e</sub>X
+                        </span>
+                    </button>
+                </form>
+            </li>
+            <li>
+                <form action="math.html">
+                    <button class="btn">
+                        <span class="box">
+                            Математика в L<sup>a</sup>T<sub>e</sub>X
+                        </span>
+                    </button>
+                </form>
+            </li>
+            <li>
+                <form action="table.html">
+                    <button class="btn">
+                        <span class="box">
+                            Таблицы в L<sup>a</sup>T<sub>e</sub>X
+                        </span>
+                    </button>
+                </form>
+            </li>
+        </div>
+    </ul>
+</nav>
+
+<div class="main-mark">
+    <main>
+
+        <h1>Создание первого TeX файла</h1>
+        <p> Чтобы начать работать в LaTeX Вам нужно либо создать файл с расширением .tex, либо воспользоваться
+        онлайн редактором, например, Overleaf.<br>
+        </p>
+        <p>
+            Первым делом необходимо через ключевое слово <b>\documentclass </b> объявить класс документа,
+            у разных документов свои классы, например, класс для резюме не будет совпадать с классом для статей.
+            В нашем случае используем самый простой класс LaTeX <b>article</b>.
+            <div class="latex-code_im">
+            <code>
+                \documentclass{article}
+            </code>
+            </div>
+
+        <p>
+            Далее необходимо объявить, что чтение документа началось, используем команды  <b>\begin{document}</b>,
+            <b>\end{document}</b>. Объединим все что написал, добавим базовый текст и запустим программу.
+        </p>
+        <div class="box-for-code_im"><div class="latex-code_im">
+            <code>
+                \documentclass{article} <br>
+                \begin{document} <br>
+                Hello, World! <br>
+                \end{document}
+            </code>
+        </div><div class="vertical-line"></div><div class="latex-result_im"><img src="images/fp_1.jpeg" alt="Картинка оверлиф"></div></div>
+        <p>
+            Теперь, когда документ уже создан, можно задуматься о его внешнем виде, поговорим о том, что необходимо подключить в первую очередь.
+            Это называется преамбулой документа.
+        </p>
+
+        <div class="latex-code_im">
+            <code>
+                \documentclass[12pt, letterpaper]{article}
+            </code>
+        </div>
+        <p>
+            Как уже говорилось, этой командой определяется тип документа. В нее также можно передавать дополнительные параметры, включенные в квадратные скобки через запятую. В данном примере эти параметры устанавливают размер шрифта (12pt) и размер страницы (letterpaper). Конечно же, для шрифта можно установить и другие размеры (9pt, 11pt, 12pt), но если размер не задан, то предустановленным значением будет 10pt. Что же касается размера страницы, то для него доступны варианты a4paperи legalpaper.
+        </p>
+
+        <div class="latex-code_im">
+            <code>
+                \usepackage[utf8]{inputenc}
+            </code>
+        </div>
+        <p>
+            Эта команда задает кодировку документа. Ее можно опустить либо изменить на другой вариант, но рекомендуется использовать именно utf-8. Если вам не требуется конкретно другая кодировка, либо вы просто не уверены, то добавьте эту строку во вступление.
+        </p>
+        <p>Подключим русский язык, потому что изначально LaTeX был рассчитан для латиницы</p>
+        <div class="latex-code_im">
+            <code>
+                \usepackage[russian]{babel}
+            </code>
+        </div>
+
+        <p>
+            Знак % объявляет начало комментария <br>
+            Для добавления в документ заголовка, автора и даты необходимо внести во вступление три строки (только не в основное тело документа):
+        </p>
+        <div class="latex-code_im">
+            <code>
+                \title{Первая страничка} % заголовок
+            </code>
+        </div>
+        <div class="latex-code_im">
+            <code>
+                \author{Александр Лотяков} % имя автора
+            </code>
+        </div>
+        <div class="latex-code_im">
+            <code>
+                \date{Ноябрь 2022} % дата
+            </code>
+        </div>
+        <p>
+            Теперь добавим отступы.
+        </p>
+        <div class="latex-code_im">
+            <code>
+                \usepackage[left=1.5cm,right=1.5cm,top=2cm, <br>
+                bottom=2.5cm]{geometry}
+            </code>
+        </div>
+        <p>И призовем нашу информацию об авторе внутри документа с помощью команды <b>\maketitle</b>.
+        Теперь объединим все в одно целое и запустим.</p>
+        <div class="latex-code_im">
+            <code>
+                \documentclass{article} <br>
+                \documentclass[12pt, letterpaper]{article} <br>
+                \usepackage[utf8]{inputenc} <br>
+                \usepackage[russian]{babel} <br>
+                \usepackage[left=1.5cm,right=1.5cm,top=2cm, <br>
+                bottom=2.5cm]{geometry} <br>
+                \title{Первая страничка} % заголовок <br>
+                \author{Александр Лотяков} % имя автора <br>
+                \date{Ноябрь 2022} % дата <br>
+                \begin{document} <br>
+                \maketitle <br>
+                Пивет, я родився! <br>
+                \end{document} <br>
+            </code>
+        </div><div class="latex-result_im"><img src="images/fp_2.jpeg" alt="Картинка оверлиф"></div>
+
+        <div class="bell" id="bell">
+            <div class="indicator" id="indicator">0</div>
+            <div class="bell-header">
+                <i class="fa fa-star" id="bellIcon"></i>
+            </div>
+            <ul class="bellContent" id="bellContent"></ul>
+        </div>
+    </main>
+</div>
+
+<div class="cat-mark">
+    <div class="cat-mark-content">
+        <p>
+            У нашего сайта нет рекламы, но есть уголок котиков, чтобы вы могли делать перерыв и смотреть на котиков ^-^
+        </p>
+        <div class="cat-img">
+            <img src="images/cat_9.jpeg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_10.jpeg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_7.jpg" alt="Картинка оверлиф">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_5.jpeg" alt="Картинка оверлиф">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_3.jpeg" alt="Картинка оверлиф">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_2.jpeg" alt="Картинка оверлиф">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_4.jpeg" alt="Картинка оверлиф">
+        </div>
+    </div>
+</div>
+
+<div class="footer footer-mark">
+    <footer>
+        <div class="content_grid_footer">
+            <div class="container_footer">
+                <div class="sec aboutus">
+                    <h2> О нас</h2>
+                    <p>
+                        Данный сайт создан студентом РТУ МИРЭА, чтобы обучить всех желающих текстовой разметке L<sup>A</sup>T<sub>E</sub>X. <br>
+                        Подробнее об авторе вы можете узнать по его социальным сетям.
+                    </p>
+                    <ul class="container_for_icons">
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-youtube-play"></i></a>
+                        </li>
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-instagram"></i></a>
+                        </li>
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-paper-plane"></i></a>
+                        </li>
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-github"></i></a></li>
+                    </ul>
+                </div>
+<!--                <div class="sec quicklinks">-->
+<!--                    <h2>Полезные Ссылки</h2>-->
+<!--                    <ul>-->
+<!--                        <li><a href="#">About</a></li>-->
+<!--                        <li><a href="#">FAQ</a></li>-->
+<!--                        <li><a href="#">Privacy Policy</a></li>-->
+<!--                        <li><a href="#">Help</a></li>-->
+<!--                        <li><a href="#">Contact</a></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+                <div class="sec contact">
+                    <h2>Наши контакты/h2>
+                    <ul class="info">
+                        <li>
+                            <span><i class="fa fa-map-marker"></i></span>
+                            <span>Вернадского 86с1</span>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-phone"></i></span>
+                            <p><a href="#">+7 800 555 35 35</a></p>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-envelope"></i></span>
+                            <p><a href="#">ramalguseynov03@gmail.com</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyrightText">
+        <p>Copyright © 2022 L<sup>A</sup>T<sub>E</sub>X tutorial. All right Reserved.</p>
+    </div>
+</div>
+
+<script src="pupupu.js"></script>
+
+</body>
+</html>

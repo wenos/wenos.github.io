@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Самоучитель по LaTeX</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/563ce4d2d7.js" crossorigin="anonymous"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://kit.fontawesome.com/563ce4d2d7.js" crossorigin="anonymous"></script>
+
+</head>
+<body class="grid_container_main">
+<nav class="navbar header-mark">
+  <div class="logo">
+    <a href="index.html">
+      L<sup>A</sup>T<sub>E</sub>X
+    </a>
+  </div>
+  <ul class="nav-links">
+    <input type="checkbox" id="checkbox_toggle">
+    <label for="checkbox_toggle" class="hamburger"><span class="hamburger-line"></span></label>
+    <div class="menu">
+      <li>
+        <form action="firstPage.html">
+          <button class="btn">
+                        <span class="box">
+                            Создание первого документа TeX
+                        </span>
+          </button>
+        </form>
+      </li>
+      <li>
+        <form action="math.html">
+          <button class="btn">
+                        <span class="box">
+                            Математика в L<sup>a</sup>T<sub>e</sub>X
+                        </span>
+          </button>
+        </form>
+      </li>
+      <li>
+        <form action="table.html">
+          <button class="btn">
+                        <span class="box">
+                            Таблицы в L<sup>a</sup>T<sub>e</sub>X
+                        </span>
+          </button>
+        </form>
+      </li>
+    </div>
+  </ul>
+</nav>
+
+<div class="main-mark">
+  <main>
+    <h2>Форматирование текста</h2>
+    <p>Текст является важной частью любой книги, статьи, языка программирования и даже LaTeX не исключение, в этом разделе мы рассмотрим основные способы форматирования текста</p>
+
+    <div class="box-for-code"><div class="latex-code"><code>\underline{Подчеркнутый текст}</code></div><div class="vertical-line"></div><div class="latex-result"><u>Подчеркнутый текст</u></div></div>
+    <div class="box-for-code"><div class="latex-code"><code>\textbf{Полужирный текст}</code></div><div class="vertical-line"></div><div class="latex-result">$$\textbf{Полужирный текст}$$</div></div>
+    <div class="box-for-code"><div class="latex-code"><code>\textit{Курсивный текст}, \em{Курсивный текст}</code></div><div class="vertical-line"></div><div class="latex-result">$$\textit{Курсивный текст}, \textit{Курсивный текст}$$</div></div>
+    <div class="line"></div>
+    <h2>Вставка кода</h2>
+    <p>Чтобы код не потерял свой внешний вид в LaTeX было создано множество пакетов, рассмотрим несколько из них. Для демонстрации результата воспользуемся онлайн-сервисом Overleaf.</p>
+    <div class="vertical-box">
+      <div class="vert-line"></div>
+      <div class="vertical-line"></div>
+      <div class="box-for-grid">
+    <h3>Пакет Verbatim</h3>
+    <p>Данный пакет максимально прост в использовании, вам лишь нужно прописать <b>\begin{verbatim}</b>, <b>\end{verbatim}</b> и вставить нужный код</p>
+    <div class="box-for-code_im"><div class="latex-code_im">
+      <code>
+\begin{verbatim} <br>
+for i in range(10): <br>
+        &nbsp print("Hello, world!) <br>
+\end{verbatim}
+      </code>
+    </div><div class="vertical-line"></div><div class="latex-result_im"><img src="images/code_1.jpeg" alt="Картинка оверлиф"></div></div>
+    <div class="line"></div>
+    <h3>Пакет Alltt</h3>
+    <p>Данный пакет дает больше возможностей, чем пакет verbatim, вы сможете менять форматирование текста и даже выделять нужный текст цветами</p>
+    <div class="box-for-code_im"><div class="latex-code_im">
+      <code>
+        \begin{alltt}<br>
+        for i in range(10):<br>
+        &nbsp \textit{print}("Hello, world!)<br>
+        \end{alltt}
+      </code>
+    </div><div class="vertical-line"></div><div class="latex-result_im"><img src="images/code_2.jpeg" alt="Картинка оверлиф"></div></div>
+    <div class="line"></div>
+    <h3>Пакет Minted</h3>
+    <p>Данный пакет подходит для тех, кто хочет не просто передать сам код, но и синтаксическую подсветку языка, на котором пишет.
+    Ключевой момент в том, чтобы после объявления начала блока кода написать название языка, на котором код написан.</p>
+    <div class="box-for-code_im"><div class="latex-code_im">
+      <code>
+        \begin{minted}{python}<br>
+        for i in range(10):<br>
+        &nbsp print("Hello, world")<br>
+        \end{minted}
+      </code>
+    </div><div class="vertical-line"></div><div class="latex-result_im"><img src="images/code_3.jpeg" alt="Картинка оверлиф"></div></div>
+      </div>
+    </div>
+    <div class="bell" id="bell">
+      <div class="indicator" id="indicator">0</div>
+      <div class="bell-header">
+        <i class="fa fa-star" id="bellIcon"></i>
+      </div>
+      <ul class="bellContent" id="bellContent"></ul>
+    </div>
+  </main>
+</div>
+
+<div class="cat-mark">
+  <div class="cat-mark-content">
+    <p>
+      У нашего сайта нет рекламы, но есть уголок котиков, чтобы вы могли делать перерыв и смотреть на котиков ^-^
+    </p>
+    <div class="cat-img">
+      <img src="images/cat_7.jpg" alt="Картинка оверлиф">
+    </div>
+    <div class="cat-img">
+      <img src="images/cat_5.jpeg" alt="Картинка оверлиф">
+    </div>
+    <div class="cat-img">
+      <img src="images/cat_3.jpeg" alt="Картинка оверлиф">
+    </div>
+    <div class="cat-img">
+      <img src="images/cat_2.jpeg" alt="Картинка оверлиф">
+    </div>
+    <div class="cat-img">
+      <img src="images/cat_4.jpeg" alt="Картинка оверлиф">
+    </div>
+  </div>
+</div>
+
+<div class="footer footer-mark">
+  <footer>
+    <div class="content_grid_footer">
+      <div class="container_footer">
+        <div class="sec aboutus">
+          <h2> О нас</h2>
+          <p>
+            Данный сайт создан студентом РТУ МИРЭА, чтобы обучить всех желающих текстовой разметке L<sup>A</sup>T<sub>E</sub>X. <br>
+            Подробнее об авторе вы можете узнать по его социальным сетям.
+          </p>
+          <ul class="container_for_icons">
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-youtube-play"></i></a>
+            </li>
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-instagram"></i></a>
+            </li>
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-paper-plane"></i></a>
+            </li>
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-github"></i></a></li>
+          </ul>
+        </div>
+<!--        <div class="sec quicklinks">-->
+<!--          <h2>Полезные Ссылки</h2>-->
+<!--          <ul>-->
+<!--            <li><a href="#">About</a></li>-->
+<!--            <li><a href="#">FAQ</a></li>-->
+<!--            <li><a href="#">Privacy Policy</a></li>-->
+<!--            <li><a href="#">Help</a></li>-->
+<!--            <li><a href="#">Contact</a></li>-->
+<!--          </ul>-->
+<!--        </div>-->
+        <div class="sec contact">
+          <h2>Наши контакты</h2>
+          <ul class="info">
+            <li>
+              <span><i class="fa fa-map-marker"></i></span>
+              <span>Вернадского 86с1</span>
+            </li>
+            <li>
+              <span><i class="fa fa-phone"></i></span>
+              <p><a href="#">+7 800 555 35 35</a></p>
+            </li>
+            <li>
+              <span><i class="fa fa-envelope"></i></span>
+              <p><a href="#">ramalguseynov03@gmail.com</a></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="copyrightText">
+    <p>Copyright © 2022 L<sup>A</sup>T<sub>E</sub>X tutorial. All right Reserved.</p>
+  </div>
+</div>
+
+<script src="pupupu.js"></script>
+
+</body>
+</html>

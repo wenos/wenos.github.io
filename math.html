@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Самоучитель по LaTeX</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://kit.fontawesome.com/563ce4d2d7.js" crossorigin="anonymous"></script>
+
+</head>
+<body class="grid_container_main">
+<nav class="navbar header-mark">
+    <div class="logo">
+        <a href="index.html">
+            L<sup>A</sup>T<sub>E</sub>X
+        </a>
+    </div>
+    <ul class="nav-links">
+        <input type="checkbox" id="checkbox_toggle">
+        <label for="checkbox_toggle" class="hamburger"><span class="hamburger-line"></span></label>
+        <div class="menu">
+            <li>
+                <form action="firstPage.html">
+                    <button class="btn">
+                        <span class="box">
+                            Создание первого документа TeX
+                        </span>
+                    </button>
+                </form>
+            </li>
+            <li>
+                <form action="text_edit.html">
+                    <button class="btn">
+                        <span class="box">
+                            Обработка текста в L<sup>a</sup>T<sub>e</sub>X
+                        </span>
+                    </button>
+                </form>
+            </li>
+            <li>
+                <form action="table.html">
+                    <button class="btn">
+                        <span class="box">
+                            Таблицы в L<sup>a</sup>T<sub>e</sub>X
+                        </span>
+                    </button>
+                </form>
+            </li>
+        </div>
+    </ul>
+</nav>
+
+<div class="main-mark">
+    <main>
+
+        <h2>
+            Математические формулы в LaTeX
+        </h2>
+        <p>
+            Одним из главных мотивов для Дональда Кнута, когда он начал разрабатывать исходную систему TeX, было
+            создание чего-то, что позволяло бы просто записывать математические формулы, но при этом выглядело бы
+            профессионально на этапе печати. Тот факт, что ему это удалось, скорее всего и был причиной того, что TeX (а
+            позже и LaTeX) стал настолько популярным в научном сообществе. Возможность набора математических формул —
+            одна из самых сильных сторон LaTeX. Но при этом, это очень объёмная тема из-за существования большого
+            количества математических обозначений.
+        </p>
+
+        <p>Чтобы объявить работу с формулами в LaTeX нужно всего лишь обернуть формулы в $, причем $$ еще и центрируют
+            результат</p>
+
+        <div class="line"></div>
+
+        <h2>Греческие символы в LaTeX</h2>
+        <p>
+            Греческие буквы довольно часто используются в математике, но их достаточно просто набирать в математическом
+            режиме. Вам просто нужно ввести название буквы после обратной косой черты: если первая буква названия
+            строчная, вы получите строчную греческую букву, если первая буква названия заглавная (только первая буква),
+            тогда вы получите прописную букву.
+        </p>
+<!--        <div class="alert alert-success" id="successMessage">Текст скопирован!</div>-->
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$\alpha, \beta, \gamma$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\alpha, \beta, \gamma$$</div>
+        </div>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$\Delta, \delta$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\Delta, \delta$$</div>
+        </div>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$\pi, \Pi$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\pi, \Pi$$</div>
+        </div>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$\varphi$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\varphi$$</div>
+        </div>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$\mu$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\mu$$</div>
+        </div>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$\epsilon, \varepsilon$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\epsilon, \varepsilon$$</div>
+        </div>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$\zeta, \eta$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\zeta, \eta$$</div>
+        </div>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$\Theta, \vartheta$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\Theta, \vartheta$$</div>
+        </div>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$\Lambda, \lambda$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\Lambda, \lambda$$</div>
+        </div>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$\Sigma$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\Sigma$$</div>
+        </div>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$\Psi, \ps$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\Psi, \psi$$</div>
+        </div>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$\Omega, \omega$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\Omega, \omega$$</div>
+        </div>
+        <div class="line"></div>
+
+        <h2>Математические операторы</h2>
+        <p>Оператор - это функция, которая записывается с помощью слова: например, тригонометрические функции, логарифмы
+            и экспоненты, пределы, а также след и определитель. В LaTeX многие из них определены как команды:</p>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$\sin(x), \cos(x)$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\sin(x), \cos(x)$$</div>
+        </div>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$}\tan(x), \cot(x)$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\tan(x), \cot(x)$$</div>
+        </div>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$\int y\, \mathrm{d}x$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\int y\, \mathrm{d}x$$</div>
+        </div>
+        <div class="box-for-code">
+            <div class="latex-code"><code>
+                $$f(n) = \begin{cases} \end{cases} $$
+            </code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$f(n) =
+                \begin{cases}
+                \end{cases}
+                $$
+            </div>
+        </div>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$\exp(x)$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\exp(x)$$</div>
+        </div>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$\ln(x)$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\ln(x)$$</div>
+        </div>
+
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$\lim\limits_{x \to \infty}$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\lim\limits_{x \to \infty}$$</div>
+        </div>
+        <div class="line"></div>
+
+        <h2>Степени и индексы</h2>
+        <p>Степени и индексы эквивалентны верхним и нижним индексам в обычном текстовом режиме. Символ каретки (^; так
+            же известный как циркумфлекс) используется чтобы что-то поднять, а нижнее подчёркивание (_) для опускания.
+            Если необходимо повысить или понизить выражение, содержащее больше одного символа, его необходимо
+            сгруппировать с помощью фигурных скобок ({ и }).</p>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$n^k$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$n^k$$</div>
+        </div>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$n_m$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$n_m$$</div>
+        </div>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$n^k_m$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$n^k_m$$</div>
+        </div>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$n^{k + 1)_{m + 1}$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$n^{k + 1}_{m + 1}$$</div>
+        </div>
+        <div class="line"></div>
+
+        <h2>Дроби, непрерывные дроби, корни и биномы</h2>
+
+        <p>
+            Дроби создаются с помощью команды <b>\frac{numerator}{denominator}</b>. Так же и Биномиальный коэффициент
+            можно записать используя команду <b>\binom</b>:
+        </p>
+
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$\frac{a}{b}$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\frac{a}{b}$$</div>
+        </div>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$\binom{a}{b}$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\binom{a}{b}$$</div>
+        </div>
+        <p>Дроби можно помещать одну внутри другой:</p>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$\frac{\frac{1}{a}+\frac{1}{b}}{b-c}$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\frac{\frac{1}{a}+\frac{1}{b}}{b-c}$$</div>
+        </div>
+        <p>Если вас устроят и простые дроби, то вам могут помочь степени и индексы:</p>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$^a/_b}$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$^a/_b$$</div>
+        </div>
+        <p>Непрерывные дроби следует записывать с помощью команды <b>\cfrac </b>:</p>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$
+                \begin{equation} x = a_0 + \cfrac{1}{a_1 + \cfrac{1}{a_2 + \cfrac{1}{a_3 + \cfrac{1}{a_4} } } }
+                \end{equation}
+                $$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\begin{equation} x = a_0 + \cfrac{1}{a_1 + \cfrac{1}{a_2 + \cfrac{1}{a_3 +
+                \cfrac{1}{a_4} } } } \end{equation}$$
+            </div>
+        </div>
+        <p>Команда <b>\sqrt</b> создаёт символ квадратного корня, окружающий математическое выражение. Он принимает
+            необязательный аргумент в квадратных скобках ([ и ]) для изменения показателя (степени) корня:</p>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$\sqrt{a}$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\sqrt{a}$$</div>
+        </div>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$\sqrt[n]{1+x+x^2+x^3+\dots+x^n}$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\sqrt[n]{1+x+x^2+x^3+\dots+x^n}$$</div>
+        </div>
+
+        <div class="line"></div>
+
+
+        <h2>Скобки, фигурные скобки и разделители</h2>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$( a ), [ b ], \{ c \}, | d |, \| e \|,
+                \langle f \rangle, \lfloor g \rfloor,
+                \lceil h \rceil, \ulcorner i \urcorner,
+                / j \backslash$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$( a ), [ b ], \{ c \}, | d |, \| e \|,
+                \langle f \rangle, \lfloor g \rfloor,
+                \lceil h \rceil, \ulcorner i \urcorner,
+                / j \backslash$$
+            </div>
+        </div>
+
+
+        <div class="line"></div>
+
+        <h2>Диакратические символы</h2>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$\hat{a}, \bar{a}, \dot{a}, \breve{a}, \vec{a}, \tilde{a}$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\hat{a}, \bar{a}, \dot{a}, \breve{a}, \vec{a}, \tilde{a}$$</div>
+        </div>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$\overrightarrow{AB}, \overleftarrow{AB}$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\overrightarrow{AB}, \overleftarrow{AB}$$</div>
+        </div>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$\overline{aaa}, \widehat{AAA}$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\overline{aaa}$$</div>
+        </div>
+
+        <div class="line"></div>
+
+        <h2>Логические обозначения</h2>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$\exists, \nexists, \forall, \in, \notin$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\exists, \nexists, \forall, \in, \notin$$</div>
+        </div>
+        <div class="box-for-code">
+            <div class="latex-code"><code>$$\land, \lor, \leq, \geq, \oplus, \cdot$$</code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$\land, \lor, \leq, \geq, \oplus, \cdot$$</div>
+        </div>
+
+
+        <div class="line"></div>
+
+        <h2>Сложные конструкции</h2>
+        <p>Математика не всегда проста и формулы могут выглядеть достаточно устрашающе, поэтому приведем примеры того,
+            как писать сложные и нестандартные формулы</p>
+
+        <div class="box-for-code">
+            <div class="latex-code"><code>
+                $$f(n) = \begin{cases} n/2 & \text{if } n \text{ is even}\\ -(n+1)/2 & \text{if } n \text{ is odd}
+                \end{cases}$$
+            </code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$f(n) =
+                \begin{cases}
+                n/2 & \text{if } n \text{ is even}\\
+                -(n+1)/2 & \text{if } n \text{ is odd}
+                \end{cases}
+                $$
+            </div>
+        </div>
+
+
+        <div class="box-for-code">
+            <div class="latex-code"><code>
+                $$\left( \begin{array}{c} n \\ r \end{array} \right) = \frac{n!}{r!(n-r)!}}$$
+            </code></div>
+            <div class="vertical-line"></div>
+            <div class="latex-result">$$
+                \left(
+                \begin{array}{c}
+                n \\
+                r
+                \end{array}
+                \right) = \frac{n!}{r!(n-r)!}$$
+            </div>
+        </div>
+
+        <div class="line"></div>
+        <div class="bell" id="bell">
+            <div class="indicator" id="indicator">0</div>
+            <div class="bell-header">
+                <i class="fa fa-star" id="bellIcon"></i>
+            </div>
+            <ul class="bellContent" id="bellContent"></ul>
+        </div>
+    </main>
+</div>
+
+<div class="cat-mark">
+    <div class="cat-mark-content">
+        <p>
+            У нашего сайта нет рекламы, но есть уголок котиков, чтобы вы могли делать перерыв и смотреть на котиков ^-^
+        </p>
+        <div class="cat-img">
+            <img src="images/cat_0.jpeg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_7.jpg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_5.jpeg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_3.jpeg" alt="Котик">
+
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_2.jpeg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_4.jpeg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_6.jpeg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_1.jpeg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_8.jpeg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_9.jpeg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_10.jpeg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_3.jpeg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_2.jpeg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_4.jpeg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_6.jpeg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_7.jpg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_4.jpeg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_5.jpeg" alt="Котик">
+        </div>
+    </div>
+</div>
+
+<div class="footer footer-mark">
+    <footer>
+        <div class="content_grid_footer">
+            <div class="container_footer">
+                <div class="sec aboutus">
+                    <h2> О нас</h2>
+                    <p>
+                        Данный сайт создан студентом РТУ МИРЭА, чтобы обучить всех желающих текстовой разметке
+                        L<sup>A</sup>T<sub>E</sub>X. <br>
+                        Подробнее об авторе вы можете узнать по его социальным сетям.
+                    </p>
+                    <ul class="container_for_icons">
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-youtube-play"></i></a>
+                        </li>
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-instagram"></i></a>
+                        </li>
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-paper-plane"></i></a>
+                        </li>
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-github"></i></a></li>
+                    </ul>
+                </div>
+<!--                <div class="sec quicklinks">-->
+<!--                    <h2>Полезные Ссылки</h2>-->
+<!--                    <ul>-->
+<!--                        <li><a href="#">About</a></li>-->
+<!--                        <li><a href="#">FAQ</a></li>-->
+<!--                        <li><a href="#">Privacy Policy</a></li>-->
+<!--                        <li><a href="#">Help</a></li>-->
+<!--                        <li><a href="#">Contact</a></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+                <div class="sec contact">
+                    <h2>Наши контакты</h2>
+                    <ul class="info">
+                        <li>
+                            <span><i class="fa fa-map-marker"></i></span>
+                            <span>Вернадского 86с1</span>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-phone"></i></span>
+                            <p><a href="#">+7 800 555 35 35</a></p>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-envelope"></i></span>
+                            <p><a href="#">ramalguseynov03@gmail.com</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyrightText">
+        <p>Copyright © 2022 L<sup>A</sup>T<sub>E</sub>X tutorial. All right Reserved.</p>
+    </div>
+</div>
+
+<script src="pupupu.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Самоучитель по LaTeX</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://kit.fontawesome.com/563ce4d2d7.js" crossorigin="anonymous"></script>
+</head>
+<body class="grid_container_main">
+<nav class="navbar header-mark">
+    <div class="logo">
+        <a href="index.html">
+            L<sup>A</sup>T<sub>E</sub>X
+        </a>
+    </div>
+    <ul class="nav-links">
+        <input type="checkbox" id="checkbox_toggle">
+        <label for="checkbox_toggle" class="hamburger"><span class="hamburger-line"></span></label>
+        <div class="menu">
+            <li>
+                <form action="firstPage.html">
+                    <button class="btn">
+                        <span class="box">
+                            Создание первого документа TeX
+                        </span>
+                    </button>
+                </form>
+            </li>
+            <li>
+                <form action="text_edit.html">
+                    <button class="btn">
+                        <span class="box">
+                            Обработка текста в L<sup>a</sup>T<sub>e</sub>X
+                        </span>
+                    </button>
+                </form>
+            </li>
+            <li>
+                <form action="math.html">
+                    <button class="btn">
+                        <span class="box">
+                            Математика в L<sup>a</sup>T<sub>e</sub>X
+                        </span>
+                    </button>
+                </form>
+            </li>
+            <li>
+                <form action="table.html">
+                    <button class="btn">
+                        <span class="box">
+                            Таблицы в L<sup>a</sup>T<sub>e</sub>X
+                        </span>
+                    </button>
+                </form>
+            </li>
+        </div>
+    </ul>
+</nav>
+
+<div class="main-mark">
+    <main>
+        <div class="main-content">
+
+            <h1>Что такое LaTeX?</h1>
+            <p>
+                LaTeX — наиболее популярный набор макрорасширений (или макропакет) системы компьютерной вёрстки TeX,
+                который облегчает набор сложных документов. В типографском наборе системы TeX форматируется традиционно как LAΤΕΧ.
+            </p>
+            <div class="line"></div>
+            <h1>Что такое TeX?</h1>
+            <p>
+            TeX — система компьютерной вёрстки, разработанная американским профессором информатики
+            <a href="https://ru.wikiquote.org/wiki/Дональд_Кнут",
+               target="blank" title="Лучшие цитаты Дональда Кнута"> Дональдом Кнутом</a>
+            в целях создания компьютерной типографии. В неё входят средства для секционирования документов, для работы с
+            перекрёстными ссылками. В частности, благодаря этим возможностям, TeX популярен в академических кругах, особенно
+            среди математиков и физиков.
+            </p>
+            <div class="download_latex">
+               <h3>
+                   Дистрибутивы TeX
+               </h3>
+                <p>Если вы новичок в TeX и LaTeX или просто хотите простую установку, получите полный дистрибутив TeX. TeX Users Group (TUG)
+                имеет список известных дистрибутивов, которые являются полностью или наименее в первую очередь свободным программным обеспечением.</p>
+                <div class="line"></div>
+                <ul>
+                    <li>
+                        <div class="name">
+                            <i class="fa fa-linux" aria-hidden="true"></i>
+                            <p>Linux</p>
+                        </div>
+                        <div class="dist-info">
+                            Проверьте свой источник программного обеспечения дистрибутивов Linux на наличие дистрибутива TeX, включая LaTeX.
+                            Вы также можете установить текущий дистрибутив TeX Live напрямую - на самом деле это может быть целесообразно, так как многие дистрибутивы
+                            Linux содержат только старые версии TeX Live, подробности см. в статусе пакета Linux TeX Live.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="name">
+                            <i class="fa fa-apple" aria-hidden="true"></i>
+                            <p>Apple</p>
+                        </div>
+                        <div class="dist-info">
+                            Дистрибутив MacTeX содержит все необходимое, включая полную систему TeX с самим LaTeX и редакторы для написания документов.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="name">
+                            <i class="fa fa-windows" aria-hidden="true"></i>
+                            <p>Windows</p>
+                        </div>
+                        <div class="dist-info">
+                            Ознакомьтесь с дистрибутивами MiKTeX orproTeXt или TeX Live; они содержат полную систему TeX с самим LaTeX и редакторами для написания документов.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="name">
+                            <i class="fa fa-globe" aria-hidden="true"></i>
+                            <p>Online</p>
+                        </div>
+                        <div class="dist-info">
+                            Онлайн-сервисы LaTeX, такие как Papeeria, Overleaf, ShareLaTeX, Datazar и база LaTeX, предлагают возможность редактировать, просматривать и загружать файлы LaTeX и полученные PDF-файлы.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+    </main>
+</div>
+
+<div class="cat-mark">
+    <div class="cat-mark-content">
+        <p>
+            У нашего сайта нет рекламы, но есть уголок котиков, чтобы вы могли делать перерыв и смотреть на котиков ^-^
+        </p>
+        <div class="cat_cont">
+        <div class="cat-img">
+            <img src="images/cat_6.jpeg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_2.jpeg" alt="Котик">
+        </div>
+        <div class="cat-img">
+            <img src="images/cat_3.jpeg" alt="Котик">
+        </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer footer-mark">
+    <footer>
+        <div class="content_grid_footer">
+            <div class="container_footer">
+                <div class="sec aboutus">
+                    <h2> О нас</h2>
+                    <p>
+                        Данный сайт создан студентом РТУ МИРЭА, чтобы обучить всех желающих текстовой разметке L<sup>A</sup>T<sub>E</sub>X. <br>
+                        Подробнее об авторе вы можете узнать по его социальным сетям.
+                    </p>
+                    <ul class="container_for_icons">
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-youtube-play"></i></a>
+                        </li>
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-instagram"></i></a>
+                        </li>
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-paper-plane"></i></a>
+                        </li>
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-github"></i></a></li>
+                    </ul>
+                </div>
+<!--                <div class="sec quicklinks">-->
+<!--                    <h2>Полезные Ссылки</h2>-->
+<!--                    <ul>-->
+<!--                        <li><a href="#">About</a></li>-->
+<!--                        <li><a href="#">FAQ</a></li>-->
+<!--                        <li><a href="#">Privacy Policy</a></li>-->
+<!--                        <li><a href="#">Help</a></li>-->
+<!--                        <li><a href="#">Contact</a></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+                <div class="sec contact">
+                    <h2>Наши контакты</h2>
+                    <ul class="info">
+                        <li>
+                            <span><i class="fa fa-map-marker"></i></span>
+                            <span>Вернадского 86с1</span>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-phone"></i></span>
+                            <p><a href="#">+7 800 555 35 35</a></p>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-envelope"></i></span>
+                            <p><a href="#">Autor@gmail.com</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyrightText">
+        <p>Copyright © 2022 L<sup>A</sup>T<sub>E</sub>X tutorial. All right Reserved.</p>
+    </div>
+</div>
+
+<script src="pupupu.js"></script>
+
+</body>
+</html>
