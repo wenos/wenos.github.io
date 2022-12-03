@@ -1,4 +1,4 @@
-
+// changing the color
 let butLickes=document.querySelectorAll(".cat-img")
 butLickes.forEach((item)=>{
     let like = document.createElement("i");
@@ -12,6 +12,7 @@ butLickes.forEach((item)=>{
     })
     item.append(like);
 })
+
 const content = document.querySelector(".bell .bellContent");
 const cnt = document.querySelector(".bell .indicator");
 
@@ -39,7 +40,6 @@ for (let i = 0; i < x.length; ++i){
         }
     })
     x[i].append(star);
-
     x[i].append(c);
 }
 
@@ -66,49 +66,25 @@ for (let i = 0; i < a.length; ++i){
         }
     })
     a[i].append(star);
-
     a[i].append(c);
 }
 
 
 
 bell.style.borderRadius = "50%";
-
-
 bell.onclick = function () {
     if (bell.style.borderRadius === "50%") {
-        bell.style = `
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50px;
-    `;
-        bellIcon.style = `
-    margin-left: 1.5rem;
-    `;
-        bellContent.style = `
-    transition: color 0.37s 0.3s;
-    color: black;
-    `;
+        bell.style = `width: 15rem; height: 15rem;border-radius: 50px;`;
+        bellIcon.style = `margin-left: 1.5rem;`;
+        bellContent.style = `transition: color 0.37s 0.3s;color: black;`;
         indicator.style = `
     transform: scale(1.2);
     `;
     } else {
-        bell.style = `
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 50%;
-    `;
-        bellIcon.style = `
-    margin-left: 0.2rem;
-    `;
-        bellContent.style = `
-    height: 0rem;
-    transition: color 0.1s;
-    color: rgba(234, 229, 202);
-    `;
-        indicator.style = `
-    transform: scale(1);
-    `;
+        bell.style = `width: 3.5rem;height: 3.5rem;border-radius: 50%;`;
+        bellIcon.style = `margin-left: 0.2rem;`;
+        bellContent.style = `height: 0rem;transition: color 0.1s;color: rgba(234, 229, 202);`;
+        indicator.style = `transform: scale(1);`;
     }
 };
 
