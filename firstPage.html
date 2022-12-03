@@ -69,20 +69,20 @@
             В нашем случае используем самый простой класс LaTeX <b>article</b>.
             <div class="latex-code_im">
             <code>
-                \documentclass{article}
+                \documentclass{ article }
             </code>
             </div>
 
         <p>
-            Далее необходимо объявить, что чтение документа началось, используем команды  <b>\begin{document}</b>,
-            <b>\end{document}</b>. Объединим все что написал, добавим базовый текст и запустим программу.
+            Далее необходимо объявить, что чтение документа началось, используем команды  <b>\begin{ document }</b>,
+            <b>\end{ document }</b>. Объединим все что написал, добавим базовый текст и запустим программу.
         </p>
         <div class="box-for-code_im"><div class="latex-code_im">
             <code>
-                \documentclass{article} <br>
-                \begin{document} <br>
+                \documentclass{ article } <br>
+                \begin{ document } <br>
                 Hello, World! <br>
-                \end{document}
+                \end{ document }
             </code>
         </div><div class="vertical-line"></div><div class="latex-result_im"><img src="images/fp_1.jpeg" alt="Картинка оверлиф"></div></div>
         <p>
@@ -92,7 +92,7 @@
 
         <div class="latex-code_im">
             <code>
-                \documentclass[12pt, letterpaper]{article}
+                \documentclass[12pt, letterpaper]{ article }
             </code>
         </div>
         <p>
@@ -101,7 +101,7 @@
 
         <div class="latex-code_im">
             <code>
-                \usepackage[utf8]{inputenc}
+                \usepackage[utf8]{ inputenc }
             </code>
         </div>
         <p>
@@ -110,7 +110,7 @@
         <p>Подключим русский язык, потому что изначально LaTeX был рассчитан для латиницы</p>
         <div class="latex-code_im">
             <code>
-                \usepackage[russian]{babel}
+                \usepackage[russian]{ babel }
             </code>
         </div>
 
@@ -120,17 +120,17 @@
         </p>
         <div class="latex-code_im">
             <code>
-                \title{Первая страничка} % заголовок
+                \title{ Первая страничка } % заголовок
             </code>
         </div>
         <div class="latex-code_im">
             <code>
-                \author{Александр Лотяков} % имя автора
+                \author{ Александр Лотяков } % имя автора
             </code>
         </div>
         <div class="latex-code_im">
             <code>
-                \date{Ноябрь 2022} % дата
+                \date{ Ноябрь 2022 } % дата
             </code>
         </div>
         <p>
@@ -138,30 +138,31 @@
         </p>
         <div class="latex-code_im">
             <code>
-                \usepackage[left=1.5cm,right=1.5cm,top=2cm, <br>
-                bottom=2.5cm]{geometry}
+                \usepackage[ left=1.5cm, right=1.5cm, top=2cm, <br>
+                bottom=2.5cm ]{ geometry }
             </code>
         </div>
         <p>И призовем нашу информацию об авторе внутри документа с помощью команды <b>\maketitle</b>.
         Теперь объединим все в одно целое и запустим.</p>
+        <div class="box-for-code_im">
         <div class="latex-code_im">
             <code>
-                \documentclass{article} <br>
-                \documentclass[12pt, letterpaper]{article} <br>
-                \usepackage[utf8]{inputenc} <br>
-                \usepackage[russian]{babel} <br>
-                \usepackage[left=1.5cm,right=1.5cm,top=2cm, <br>
-                bottom=2.5cm]{geometry} <br>
-                \title{Первая страничка} % заголовок <br>
-                \author{Александр Лотяков} % имя автора <br>
-                \date{Ноябрь 2022} % дата <br>
-                \begin{document} <br>
+                \documentclass{ article } <br>
+                \documentclass[12pt, letterpaper]{ article } <br>
+                \usepackage[utf8]{ inputenc } <br>
+                \usepackage[russian]{ babel } <br>
+                \usepackage[ left=1.5cm, right=1.5cm, top=2cm, <br>
+                bottom=2.5cm]{ geometry } <br>
+                \title{ Первая страничка }<br>
+                \author{ Александр Лотяков } <br>
+                \date{ Ноябрь 2022 } <br>
+                \begin{ document } <br>
                 \maketitle <br>
                 Пивет, я родився! <br>
-                \end{document} <br>
+                \end{ document } <br>
             </code>
         </div><div class="latex-result_im"><img src="images/fp_2.jpeg" alt="Картинка оверлиф"></div>
-
+        </div>
         <div class="bell" id="bell">
             <div class="indicator" id="indicator">0</div>
             <div class="bell-header">
