@@ -1,4 +1,7 @@
 // changing the color
+bell.style.borderRadius = "50%";
+bell.style.display = "none"
+
 let butLickes=document.querySelectorAll(".cat-img")
 butLickes.forEach((item)=>{
     let like = document.createElement("i");
@@ -29,10 +32,12 @@ for (let i = 0; i < x.length; ++i){
     })
     star.addEventListener("click",()=>{
         if (star.style.color ==="rgb(201, 201, 108)") {
-
             let a = document.getElementById("copy" + star.id);
             a.remove();
             cnt.innerHTML = Number(cnt.innerHTML) - 1;
+            if (cnt.innerHTML === '0'){
+                bell.style.display = `none`;
+            }
             star.style.color = "black";
         } else {
             newNotification(y[i].textContent, "copy" + star.id);
@@ -59,6 +64,9 @@ for (let i = 0; i < a.length; ++i){
             let cp= document.getElementById("copy_im" + star.id);
             cp.remove();
             cnt.innerHTML = Number(cnt.innerHTML) - 1;
+            if (cnt.innerHTML === '0'){
+                bell.style.display = `none`;
+            }
             star.style.color = "black";
         } else {
             newNotification(b[i].textContent, "copy_im" + star.id);
@@ -71,10 +79,11 @@ for (let i = 0; i < a.length; ++i){
 
 
 
-bell.style.borderRadius = "50%";
 bell.onclick = function () {
     if (bell.style.borderRadius === "50%") {
         bell.style = `width: 15rem; height: 15rem;border-radius: 50px;`;
+        bell.style.overflow = `hidden`;
+
         bellIcon.style = `margin-left: 1.5rem;`;
         bellContent.style = `transition: color 0.37s 0.3s;color: black;`;
         indicator.style = `
@@ -89,8 +98,11 @@ bell.onclick = function () {
 };
 
 function newNotification(text, textid) {
+    bell.style.display = "initial";
     cnt.innerHTML = Number(cnt.innerHTML) + 1;
     let newNotif = document.createElement("div");
+    bellContent.style.display = `none`;
+    newNotif.className = 'notif';
     newNotif.id = textid;
     content.append(newNotif);
     newNotif.innerHTML = text;
